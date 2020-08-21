@@ -1,0 +1,141 @@
+RGSM Asterisk Channel Driver Release Notes
+
+v1.37 Aug 16, 2019
+-----------------------------------------
+1) Fixed Incomming SMS indication message for QuecTel UC15 modem modules
+==========================================
+v1.36 Jul 20, 2018
+-----------------------------------------
+1) Changed +CME ERROR reaction in AT processor
+==========================================
+v1.35 May 28, 2018
+-----------------------------------------
+1) Added IMEI change for modem module QuecTel UC15 
+==========================================
+v1.34 May 10, 2018
+-----------------------------------------
+1) Fixed ICCID reading on fast local SIM cards 
+==========================================
+v1.33 May 07, 2018
+-----------------------------------------
+1) Fixed voice samples parameter in trhe voice packets.
+==========================================
+v1.31 Apr 13, 2018
+-----------------------------------------
+1) Added support of modem module QuecTel UC15 2G/3G
+==========================================
+
+v1.24 - Dec 12, 2017
+---------------------
+1) Added AT+SIDET command into modem initializatiion procedure for the cancel echo effect
+
+v1.23 - May 12, 2017
+---------------------
+1) Allow to send AT commands via CLI after then a RDY/START received and until power off or reset
+
+v1.22 - Nov 28, 2016
+---------------------
+Restored fix "Asterisk crash on receive long binary SMS (v1.16)"
+
+
+v1.21 - Aug 26, 2016
+---------------------
+Added support for 3G modules SIM5320
+
+
+v1.16 - Mar 9, 2016
+---------------------
+1) Fixed Asterisk crash on receive long binary SMS
+
+
+v1.15 - Oct 20, 2014
+---------------------
+1) Added per channel configuration option "auto_start=enable|disable" to start channels on module load. Defaults "disable"
+
+v1.14 - Sept 11, 2014
+---------------------
+1) Clear channel state variables on channel resets and on network registration attempts
+2) Start imei change procedure with RF circuits switched off to avoid intermediate registrations on BTS
+3) Verbose all registration statuses with ICCID
+4) Count erroneous AT commands and recover a channel when gsm module hangs
+5) Restart a channel immediately after imei change complete to avoid detection "imei changed on the fly"
+
+
+v1.13 - Aug 19, 2014
+---------------------
+1) Use sim900 modem firmware 1137B12SIM900M64_ST.cla as defaults
+2) Reset IMEI compare flag after imei change procedure
+3) Issue at command DDET=1 to enable DTMF detection after receiving "CPIN: READY"
+
+
+v1.12 - Jul 8, 2014
+---------------------
+1) Fixed Bug 2275 - Incorrect identify of slots on simbanks
+
+v1.11 - Jun 10, 2014
+---------------------
+1) Implemented Bz2243 - Add ICCID in channel reg status verbose log
+
+v1.10 - May 21, 2014
+---------------------
+1) Corrected format of messages returned by AMI action RSGMSendSTKResponse and event RGSMNotifySTK
+2) Added configurable parameter to enable/disable the Sim Tollkit capabilities for sim cards
+
+v1.9 - Feb 26, 2014
+---------------------
+1) Implemented support of parameter "all" for modem firmware upgrade.
+
+
+v1.8 - Aug 20, 2013
+---------------------
+1) Implemented Bz2009 - Add missing events and use Unification in names for Events
+
+
+v1.7 - Jul 2, 2013
+---------------------
+1) Fixed Bz1990 - "grsm show calls" may display wrong value in Duration column
+
+v1.6 - Jun 17, 2013
+---------------------
+1) Implemented 1939 - Refactore rgsm-sms.db to make it a channel name insensitive
+2) Fixed Bz1940 - Recover a channel when gsm module hangup
+3) Refix Bz1934 - Useful table outputs info: Increased length of ICCID field
+
+v1.5 - May 27, 2013
+---------------------
+1) Implemented 1934 - Useful table outputs info
+1) Fixed Bz1935 - DFU for card with enabled channels fails
+2) Implemented Bz1938 - Improve SIM900 firmware upgrade procedure
+
+v1.4 - May 22, 2013
+---------------------
+1) Fixed Bz1930 - Unloading a chan_rgsm.so sometimes crashes the Asterisk
+2) Fixed Bz1931 - Running imei change for multiple channels simulateneously will fail
+3) Fixed Bz1932 - New IMEI is not shown immediately after imei change complete
+4) Fixed Bz1933 - Improve Makefile
+
+v1.3 - May 17, 2013
+---------------------
+1) Fixed Bz1926 - Need channel numeration start from 1
+2) Fixed Bz1927 - Make the possibility to assign aliales for channel
+3) Fixed Bz1928 - Malformed output for CLI "rgsm show channel"
+
+v1.2 - March 29, 2013
+---------------------
+1) Implemented RGSMSendSMS AMI ACTION
+2) Fixed CLI restart channel command
+3) Implemented modem baudrate adjusting and auto-bauding
+4) Added interrupt_out() attempt counting before returning a error codec
+5) Implemented SIM Toolkit AT command processing
+6) Implemented RGSMSendSTKRepsonse action and RGSMNotifySTK event
+7) various bug fixes
+
+v1.1 - March 06, 2013
+---------------------
+1) Implemented SMS CLI commands
+
+v1.0 - Jan XXX, 2013
+--------------------
+Initial revision to test a GGW8 mockup
+
+

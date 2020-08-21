@@ -1,0 +1,8 @@
+#see release.notes
+
+#rgsm channel driver version
+RGSM_VERSION_STR=1.37
+
+#date in format mm-dd-yyyy
+RGSM_VERSION_DATE=08-16-2019
+

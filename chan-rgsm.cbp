@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="chan-rgsm" />
+		<Option makefile_is_custom="1" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug_">
+				<Option output="bin/Debug/chan-rgsm" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<MakeCommands>
+					<Build command="$make -f $makefile" />
+					<CompileFile command="$make -f $makefile $file" />
+					<Clean command="$make -f $makefile clean" />
+					<DistClean command="$make -f $makefile distclean$target" />
+					<AskRebuildNeeded command="$make -q -f $makefile" />
+					<SilentBuild command="$make -s -f $makefile" />
+				</MakeCommands>
+			</Target>
+			<Target title="Release_">
+				<Option output="bin/Release/chan-rgsm" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="at.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="at.h" />
+		<Unit filename="atomics.h" />
+		<Unit filename="chan_rgsm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="chan_rgsm.conf" />
+		<Unit filename="chan_rgsm.h" />
+		<Unit filename="char_conv.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="char_conv.h" />
+		<Unit filename="ggw8_hal.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ggw8_hal.h" />
+		<Unit filename="release.notes" />
+		<Unit filename="rgsm_app.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="rgsm_app.h" />
+		<Unit filename="rgsm_at_processor.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="rgsm_at_processor.h" />
+		<Unit filename="rgsm_call_sm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="rgsm_call_sm.h" />
+		<Unit filename="rgsm_cli.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="rgsm_cli.h" />
+		<Unit filename="rgsm_dao.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="rgsm_dao.h" />
+		<Unit filename="rgsm_defs.h" />
+		<Unit filename="rgsm_dfu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="rgsm_dfu.h" />
+		<Unit filename="rgsm_ipc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="rgsm_ipc.h" />
+		<Unit filename="rgsm_m10.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="rgsm_m10.h" />
+		<Unit filename="rgsm_manager.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="rgsm_manager.h" />
+		<Unit filename="rgsm_mdm_sm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="rgsm_mdm_sm.h" />
+		<Unit filename="rgsm_sim300.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="rgsm_sim300.h" />
+		<Unit filename="rgsm_sim900.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="rgsm_sim900.h" />
+		<Unit filename="rgsm_sms.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="rgsm_sms.h" />
+		<Unit filename="rgsm_timers.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="rgsm_timers.h" />
+		<Unit filename="rgsm_utilities.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="rgsm_utilities.h" />
+		<Unit filename="version" />
+		<Extensions>
+			<code_completion />
+			<debugger>
+				<remote_debugging target="Debug_">
+					<options conn_type="0" serial_baud="115200" additional_cmds="sudo asterisk -fc" skip_ld_path="1" />
+				</remote_debugging>
+			</debugger>
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
